@@ -1,6 +1,7 @@
 package com.ckj.projects;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,14 +15,13 @@ import java.io.PrintWriter;
  */
 public class IndexServer extends HttpServlet {
 
-    public static JSONArray certerlist=new JSONArray();
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
         System.out.println("有客户端获取注册中心列表。。。");
         PrintWriter writer= resp.getWriter();
-        writer.write(certerlist.toString());
+        writer.write(Utils.getCenterList(this).toString());
         writer.flush();
     }
 }

@@ -8,18 +8,9 @@
         <servlet-class>com.ckj.projects.IndexServer</servlet-class>
     </servlet>
 
-    <servlet>
-        <servlet-name>CenterManager</servlet-name>
-        <servlet-class>com.ckj.projects.CenterManager</servlet-class>
-    </servlet>
-
     <servlet-mapping>
         <servlet-name>IndexServer</servlet-name>
         <url-pattern>/IndexServer</url-pattern>
     </servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>CenterManager</servlet-name>
-        <url-pattern>/CenterManager</url-pattern>
-    </servlet-mapping>
 </web-app>
